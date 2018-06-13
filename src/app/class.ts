@@ -3,4 +3,5 @@ export class Class {
     code: string;
     name: string;
     instructor: string;
+    selected: boolean;
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClassesService } from '../classes.service';
+import { Class } from '../class';
 
 @Component({
   selector: 'app-timetable',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimetableComponent implements OnInit {
 
-  constructor() { }
+  classes: Class[];
+
+  constructor(
+    private classesService: ClassesService
+  ) { }
+
+  getClasses(){
+    console.log("get class");
+    this.classesService.getClasses().subscribe(item => this.classes = item);
+  }
 
   ngOnInit() {
+    this.getClasses();
   }
 
 }
