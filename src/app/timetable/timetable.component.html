@@ -1,8 +1,9 @@
+<h2>Class Information</h2>
 <div *ngIf="classes">
   <ul>
     <li *ngFor="let c of classes">
         <p>{{ c.code }} - {{ c.name }}</p>
-        <p>{{ c.instructor }}</p>
+        <p>Instructor: {{ c.instructor }}</p>
     </li>
   </ul>
 </div>
