@@ -1,0 +1,9 @@
+<h2>Instructor Information</h2>
+
+<div *ngIf="instructors">
+  <ul>
+    <li *ngFor="let i of instructors">
+      <p>{{ i.name }}</p>
+    </li>
+  </ul>
+</div>
